@@ -6,9 +6,7 @@ An end-to-end data pipeline that loads HM Land Registry **Price Paid Data** into
 
 I built this as a personal project to get hands-on with the tools used in modern data engineering teams: orchestration, layered modelling, automated data testing, containers and CI/CD.
 
-<!-- Add a screenshot of a successful Airflow run at docs/airflow_run.png, then uncomment the next line:
 ![Airflow DAG run](docs/airflow_run.png)
--->
 
 ## Architecture
 
