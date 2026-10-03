@@ -41,7 +41,7 @@ def download(year: str) -> Path:
 def load(path: Path) -> None:
     load_dotenv(PROJECT_ROOT / ".env")
     conn = psycopg.connect(
-        host="localhost",
+        host=os.environ.get("POSTGRES_HOST", "localhost"),
         port=5432,
         dbname=os.environ["POSTGRES_DB"],
         user=os.environ["POSTGRES_USER"],
