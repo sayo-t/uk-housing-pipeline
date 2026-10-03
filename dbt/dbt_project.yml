@@ -1,0 +1,11 @@
+name: uk_housing
+version: "1.0.0"
+profile: uk_housing
+model-paths: ["models"]
+
+models:
+  uk_housing:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

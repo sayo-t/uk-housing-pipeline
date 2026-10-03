@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_price_paid
+    description: Cleaned and typed Price Paid transactions.
+    columns:
+      - name: transaction_id
+        data_tests:
+          - not_null
+          - unique
+      - name: price
+        data_tests:
+          - not_null
+      - name: sale_date
+        data_tests:
+          - not_null
+      - name: property_type
+        data_tests:
+          - accepted_values:
+              values: ['Detached', 'Semi-detached', 'Terraced', 'Flat/Maisonette', 'Other']

@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: mart_avg_price_by_district_month
+    description: Sales count, average and median price by district, month and property type (standard sales only).
+    columns:
+      - name: sale_month
+        data_tests:
+          - not_null
+      - name: sales_count
+        data_tests:
+          - not_null
