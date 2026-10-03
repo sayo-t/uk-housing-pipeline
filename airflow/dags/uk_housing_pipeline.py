@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from airflow.providers.standard.operators.bash import BashOperator
 from airflow.sdk import DAG
@@ -14,7 +14,7 @@ default_args = {
 with DAG(
     dag_id="uk_housing_pipeline",
     description="Ingest HM Land Registry Price Paid data, transform with dbt, test.",
-    start_date=datetime(2025, 1, 1),
+    start_date=datetime(2025, 1, 1, tzinfo=timezone.utc),
     schedule="@monthly",
     catchup=False,
     default_args=default_args,
